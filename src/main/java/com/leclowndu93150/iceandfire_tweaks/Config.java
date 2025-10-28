@@ -29,6 +29,14 @@ public class Config {
             .comment("Maximum stage for tamed dragons (1-5, 0 = no limit)")
             .defineInRange("tamedDragonMaxStage", 0, 0, 5);
 
+    private static final ForgeConfigSpec.DoubleValue DRAGON_ROOST_SIZE_MULTIPLIER = BUILDER
+            .comment("Size multiplier for dragon roosts/surface nests (1.0 = normal, 2.0 = 2x size)")
+            .defineInRange("dragonRoostSizeMultiplier", 1.0, 0.5, 10.0);
+
+    private static final ForgeConfigSpec.DoubleValue DRAGON_CAVE_SIZE_MULTIPLIER = BUILDER
+            .comment("Size multiplier for dragon caves/underground dens (1.0 = normal, 2.0 = 2x size)")
+            .defineInRange("dragonCaveSizeMultiplier", 1.0, 0.5, 10.0);
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
     public static double dragonEggDropRate;
@@ -36,6 +44,8 @@ public class Config {
     public static double tamedDragonAttackMultiplier;
     public static double tamedDragonGrowthRate;
     public static int tamedDragonMaxStage;
+    public static double dragonRoostSizeMultiplier;
+    public static double dragonCaveSizeMultiplier;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
@@ -44,5 +54,7 @@ public class Config {
         tamedDragonAttackMultiplier = TAMED_DRAGON_ATTACK_MULTIPLIER.get();
         tamedDragonGrowthRate = TAMED_DRAGON_GROWTH_RATE.get();
         tamedDragonMaxStage = TAMED_DRAGON_MAX_STAGE.get();
+        dragonRoostSizeMultiplier = DRAGON_ROOST_SIZE_MULTIPLIER.get();
+        dragonCaveSizeMultiplier = DRAGON_CAVE_SIZE_MULTIPLIER.get();
     }
 }

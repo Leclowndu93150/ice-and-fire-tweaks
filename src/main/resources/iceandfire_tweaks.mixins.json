@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "iceandfire_tweaks.refmap.json",
   "mixins": [
+    "DragonCaveSizeMixin",
     "DragonEggDropMixin",
+    "DragonRoostSizeMixin",
     "DragonUndergroundAIMixin",
     "TamedDragonStatsMixin",
     "TamedDragonGrowthMixin"
