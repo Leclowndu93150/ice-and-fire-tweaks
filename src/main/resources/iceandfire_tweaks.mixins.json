@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.leclowndu93150.iceandfire_tweaks.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "iceandfire_tweaks.refmap.json",
+  "mixins": [
+    "DragonEggDropMixin",
+    "DragonUndergroundAIMixin",
+    "TamedDragonStatsMixin",
+    "TamedDragonGrowthMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
